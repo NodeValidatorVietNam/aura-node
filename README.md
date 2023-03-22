@@ -4,7 +4,7 @@
     docker build . -t aura --build-arg VERSION=aura_v0.4.4
     
 ## Run 
-    docker run -e NODE_MONIKER="MonPham" -v /mnt/blockstore/aura:/root/.aura --name aura -p 26666:26666 --restart unless-stopped -d aura
+    docker run -e NODE_MONIKER="MonPham" -v /mnt/blockstore/aura:/root/.aura --name aura -p 26656:26656 --restart unless-stopped -d aura
 
 ## Snapshot
 

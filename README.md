@@ -11,3 +11,5 @@
     SNAP_NAME=$(curl -s https://snapshots1.nodejumper.io/aura/info.json | jq -r .fileName)
     axel -an 10 "https://snapshots1.nodejumper.io/aura/${SNAP_NAME}"
     lz4 -dc $SNAP_NAME | tar -xf - -C .
+## Cheat sheet
+[https://nodejumper.io/aura/cheat-sheet](https://nodejumper.io/aura/cheat-sheet)

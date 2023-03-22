@@ -7,7 +7,7 @@
     docker run -e NODE_MONIKER="MonPham" -v /mnt/blockstore/aura:/root/.aura --name aura -p 26656:26656 --restart unless-stopped -d aura
 
 ## Snapshot
-
+    cd /mnt/blockstore/aura
     SNAP_NAME=$(curl -s https://snapshots1.nodejumper.io/aura/info.json | jq -r .fileName)
     axel -an 10 "https://snapshots1.nodejumper.io/aura/${SNAP_NAME}"
-    lz4 -dc $SNAP_NAME | tar -xf - -C "$HOME/.aura"
+    lz4 -dc $SNAP_NAME | tar -xf - -C .

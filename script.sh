@@ -1,3 +1,4 @@
+#!/bin/bash
 aurad version # main_v0.4.4-2-ga5d0798
 
 aurad config chain-id xstaxy-1
